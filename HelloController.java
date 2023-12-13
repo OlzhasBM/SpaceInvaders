@@ -1,14 +1,20 @@
 package com.example.spaceinvaders;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.animation.*;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 import javafx.util.Duration;
+
 
 public class HelloController {
 
@@ -50,10 +56,15 @@ public class HelloController {
     private int destroyedCount = 0;
     private Timeline enemyRespawnTimer;
 
-
-
     @FXML
     private Button restartButton;
+
+    @FXML
+    private Button result;
+
+    @FXML
+    private Button register;
+
 
     private boolean bulletVisible = false;
 
@@ -167,6 +178,7 @@ public class HelloController {
                 parallelTransition.pause();
                 labelPause.setVisible(true);
                 restartButton.setVisible(true);
+
             }
 
             else if(!isPause && labelPause.isVisible()){
@@ -257,12 +269,16 @@ public class HelloController {
         labelLose.visibleProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue) {
                 restartButton.setVisible(true);
+                register.setVisible(true);
+                result.setVisible(true);
             } else {
                 restartButton.setVisible(false);
+                register.setVisible(false);
+                result.setVisible(false);
             }
         });
 
-        enemyRespawnTimer = new Timeline(new KeyFrame(Duration.seconds(7), event -> {
+        enemyRespawnTimer = new Timeline(new KeyFrame(Duration.seconds(10), event -> {
             enemy.setVisible(true);
             enemy1.setVisible(true);
             enemy11.setVisible(true);
@@ -281,6 +297,41 @@ public class HelloController {
         enemyRespawnTimer.setCycleCount(Animation.INDEFINITE);
         enemyRespawnTimer.play();
 
+        register.setOnAction(event -> {
+            register.getScene().getWindow().hide();
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("register.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+
+        result.setOnAction(event -> {
+            result.getScene().getWindow().hide();
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("leaderboard.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
     }
 
     @FXML

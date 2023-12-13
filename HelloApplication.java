@@ -11,6 +11,7 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        setMainStage(stage);
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 400, 500);
         stage.initStyle(StageStyle.UNDECORATED);
@@ -46,10 +47,20 @@ public class HelloApplication extends Application {
         });
 
         stage.show();
+
     }
 
     public static void main(String[] args) {
-
         launch();
     }
+    private static Stage mainStage;
+
+    public static void setMainStage(Stage stage) {
+        mainStage = stage;
+    }
+
+    public static Stage getMainStage() {
+        return mainStage;
+    }
+
 }
