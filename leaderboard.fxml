@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="503.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spaceinvaders.Leaderboard">
+    <children>
+        <ImageView fx:id="im1" fitHeight="514.0" fitWidth="425.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/wp4162409.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="im2" fitHeight="500.0" fitWidth="417.0" layoutY="-497.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/wp4162409.jpg" />
+            </image>
+        </ImageView>
+        <Button fx:id="returnbutton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="53.0" text="Return" textAlignment="CENTER" underline="true" AnchorPane.topAnchor="14.0">
+            <font>
+                <Font name="Bauhaus 93" size="12.0" />
+            </font>
+        </Button>
+      <TableView fx:id="userTable" layoutX="112.0" layoutY="155.0" prefHeight="200.0" prefWidth="207.0">
+        <columns>
+          <TableColumn fx:id="nickC" prefWidth="147.0" text="Nickname" />
+          <TableColumn fx:id="countC" prefWidth="59.0" text="Score" />
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>

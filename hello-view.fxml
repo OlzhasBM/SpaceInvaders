@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="503.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spaceinvaders.HelloController">
+   <children>
+      <ImageView fx:id="im1" fitHeight="500.0" fitWidth="417.0" layoutX="-1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/wp4162409.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="im2" fitHeight="500.0" fitWidth="417.0" layoutY="-497.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/wp4162409.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ship" fitHeight="53.0" fitWidth="43.0" layoutX="186.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/528-5280929_nave-space-invaders-png_prev_ui.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="enemy" fitHeight="32.0" fitWidth="30.0" layoutX="60.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/eney_prev_ui.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="enemy1" fitHeight="32.0" fitWidth="30.0" layoutX="60.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/eney_prev_ui.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="enemy11" fitHeight="29.0" fitWidth="43.0" layoutX="351.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/enemy111_prev_ui.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="enemy111" fitHeight="29.0" fitWidth="51.0" layoutX="14.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/enemy111_prev_ui.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bug" fitHeight="53.0" fitWidth="51.0" layoutX="198.0" layoutY="-250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/enemy111_prev_ui.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelPause" focusTraversable="false" layoutX="157.0" layoutY="214.0" text="Pause" textFill="#edb905" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelLose" focusTraversable="false" layoutX="175.0" layoutY="170.0" prefHeight="53.0" prefWidth="68.0" text="Lose" textFill="#c76e20" visible="false">
+         <font>
+            <Font name="System Italic" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="restartButton" layoutX="168.0" layoutY="267.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="79.0" text="RESTART" textAlignment="CENTER" underline="true" visible="false">
+         <font>
+            <Font name="Bauhaus 93" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="leaderboard" layoutX="169.0" layoutY="311.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="79.0" text="LEADERBORD" textAlignment="CENTER" underline="true" visible="false">
+         <font>
+            <Font name="Bauhaus 93" size="11.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="bullet" fitHeight="29.0" fitWidth="30.0" layoutX="193.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../images/pixbullet_prev_ui.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelCount" layoutX="175.0" prefHeight="29.0" prefWidth="88.0" text="Destroyed: 0" textFill="WHITE" />
+      <ImageView fx:id="explotion" fitHeight="46.0" fitWidth="43.0" layoutX="14.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../images/exx_prev_ui.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="result" layoutX="169.0" layoutY="311.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="79.0" text="Result" textAlignment="CENTER" underline="true" visible="false">
+         <font>
+            <Font name="Bauhaus 93" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="register" layoutX="168.0" layoutY="354.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="79.0" text="Register" textAlignment="CENTER" underline="true" visible="false">
+         <font>
+            <Font name="Bauhaus 93" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
